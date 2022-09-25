@@ -1,0 +1,610 @@
+/*import java.util.*;
+public class Function
+{
+    public static int CalcSum(int a,int b)
+    {
+        int sum=a+b;
+        return sum;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int s=CalcSum(a,b);
+        System.out.println("sum of two numbers="+s);
+    }
+}
+import java.util.*;
+public class Function
+{
+    public static int CalcProd(int x,int y)
+    {
+        int m=x*y;
+        return m;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        int m=CalcProd(x,y);
+        System.out.println(m);
+    }
+}
+import java.util.*;
+public class Function
+{
+    public static int Fact(int n)
+    {
+        int fact=1;
+        while(n>0)
+        {
+            fact=fact*n;
+            n--;
+        }
+        return fact;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int f=Fact(n);
+        System.out.println(f);
+    }
+}
+import java.util.*;
+public class Main
+{
+    public static float Average(float a,float b,float c)
+    {
+        float avg=(a+b+c)/3;
+        return avg;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        float a=sc.nextInt();
+        float b=sc.nextInt();
+        float c=sc.nextInt();
+        float s=Average(a,b,c);
+        System.out.print(s);
+    }
+}*/
+import java.util.*;
+public class Function
+{
+    public static void Greater(int a,int b)
+    {
+        if(a>=b)
+        {
+            System.out.println(a);
+            return;
+        }
+        else
+        {
+            System.out.println(b);
+            return;
+        }
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        Greater(a,b);
+    }
+}
+/*import java.util.*;
+public class Main 
+{
+    public static int OddSum(int n)
+    {
+        int sum=0;
+        for(int i=1;i<=n;i=i+2)
+        {
+            sum=sum+i;
+        }
+        return sum;
+    }
+    public static int EvenSum(int x)
+    {
+        int add=0;
+        for(int i=0;i<=x;i=i+2)
+        {
+            add=add+i;
+        }
+        return add;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int s=OddSum(n);
+        System.out.println("odd number sum="+s);
+        int x=sc.nextInt();
+        int a=EvenSum(x);
+        System.out.println("even number sum="+a);
+        
+    }
+}*/
+import java.util.*;
+public class Function
+{
+    public static void AgeCheck(int x)
+    {
+        if(x>=18)
+        {
+            System.out.println("eligible");
+            return;
+        }
+        else
+        {
+            System.out.println("not eligible");
+            return;
+        }
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int age=sc.nextInt();
+        AgeCheck(age);
+    }
+}
+import java.util.*;
+public class Solutions {
+   public static void main(String args[]) {
+       int positive = 0, negative = 0, zeros = 0;
+       System.out.println("Press 1 to continue & 0 to stop");
+       Scanner sc = new Scanner(System.in);
+       int input = sc.nextInt();
+       
+       while(input == 1) {
+           System.out.println("Enter your number : ");
+           int number = sc.nextInt();
+           if(number > 0) {
+               positive++;
+           } else if(number < 0) {
+               negative++;
+           } else {
+               zeros++;
+           }
+ 
+           System.out.println("Press 1 to continue & 0 to stop");
+           input = sc.nextInt();
+       }
+ 
+       System.out.println("Positives : "+ positive);
+       System.out.println("Negatives : "+ negative);
+       System.out.println("Zeros : "+ zeros);
+   }
+}
+import java.util.*;
+public class Function
+{
+    public static int Power(int x,int n)
+    {
+        int p=1;
+        for(int i=1;i<=n;i++)
+        {
+            p=p*x;    
+        }
+        return p;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int power=Power(a,b);
+        System.out.println(power);
+    }
+}
+import java.util.*;
+public class Main
+{
+    public static void PrimeCheck(int n)
+    {
+        int c=0;
+        for(int i=2;i<=n-1;i++)
+        {
+            if(n%i==0)
+            {
+                c++;
+            }
+        }
+        if(c==0)
+        {
+            System.out.println("prime number");
+            return;
+        }
+        else
+        {
+            System.out.println("not prime number");
+            return;
+        }
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        PrimeCheck(num);
+    }
+}
+import java.util.*;
+public class Practice
+{
+    public static void Table(int n)
+    {
+        for(int i=1;i<=10;i++)
+        {
+            System.out.println(n+"*"+i+"="+n*i);
+        }
+        return;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        Table(n);
+    }
+}
+//java programs
+/*public class MyClass{
+    public static void main(String[] args){
+        int a=10;
+        int b=23;
+        System.out.println(a+b);
+        System.out.println(a-b);
+        System.out.println(a*b);
+        System.out.println(a/b);
+        System.out.println(a%b);
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        Double rad=5.5;
+        Double pie=3.14;
+        Double area=pie*pie*rad;
+        System.out.println("area of circle="+area);
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        int a=10;
+        int b=20;
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        System.out.println(a+" "+b);
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String name=sc.next();
+        int rollno=sc.nextInt();
+        System.out.println(rollno+" "+name);
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        Double item=sc.nextDouble();
+        System.out.println(item*100);
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        int a=Integer.parseInt(args[0]);
+        int b=Integer.parseInt(args[1]);
+        System.out.println(a+b);
+    }
+}
+import java.util.*;
+import java.io.*;
+import java.lang.Math;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        System.out.println((int)Math.pow(a,b));
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        if(a>=b)
+            System.out.println("greater"+a);
+        else
+            System.out.println("greater"+b);
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        Double amount=sc.nextDouble();
+        if(amount>=20000)
+            System.out.println(amount-(amount*0.1));
+        else if(amount>=10000 && amount<20000)
+            System.out.println(amount-(amount*0.05));
+        else if(amount>=5000 && amount<10000)
+            System.out.println(amount-(amount*0.02));
+        else if(amount<5000)
+            System.out.println(amount);
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        char ch=str.charAt(0);
+        switch(ch)
+        {
+            case 'v':System.out.println("violet");
+            break;
+            case 'i':System.out.println("indigo");
+            break;
+            case 'b':System.out.println("blue");
+            break;
+            case 'g':System.out.println("green");
+            break;
+            case 'y':System.out.println("yellow");
+            break;
+            case 'o':System.out.println("orange");
+            break;
+            case 'r':System.out.println("red");
+            break;
+            default:System.out.println("invalid character");
+        }
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        char ch=str.charAt(0);
+        switch(ch)
+        {
+            case 'a':System.out.println("sunday");
+            break;
+            case 'b':System.out.println("monday");
+            break;
+            case 'c':System.out.println("tuesday");
+            break;
+            case 'd':System.out.println("wednesday");
+            break;
+            case 'e':System.out.println("thursday");
+            break;
+            case 'f':System.out.println("friday");
+            break;
+            case 'g':System.out.println("saturday");
+            break;
+            default:System.out.println("invalid day");
+        }
+    }
+}*/
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int p=1;
+        for(int i=n;i>=1;i--)
+        {
+            p=p*i;
+        }
+        System.out.println("factorial"+p);
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=n;
+        int s=0;
+        do{
+            int r=n%10;
+            s=s*10+r;
+            n=n/10;
+        }while(n>0);
+        if(s==m)
+        {
+            System.out.println("palindrome"+s);
+        }
+        else
+        {
+            System.out.println("not palindrome"+m);
+        }
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int n=sc.nextInt();
+        System.out.println("fibonacci series");
+        System.out.print(a+" "+b);
+        for(int i=3;i<=n;i++)
+        {
+            int c=a+b;
+            System.out.print(" "+c);
+            a=b;
+            b=c;
+        }
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        int n=5;
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=n-i;j>=1;j--)
+            {
+                System.out.print(" ");
+            }
+            for(int j=i;j>=1;j--)
+            {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        int n=5;
+        for(int i=n;i>=1;i--)
+        {
+            for(int j=n;j>=i;j--)
+            {
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+// print array from user input
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[] =new int[n];
+        for(int i=0;i<=n-1;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<=n-1;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+//reverse of array elements
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<=n-1;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        for(int i=n-1;i>=0;i--)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int arr[]=new int[5];
+        int s=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
+            s=s+arr[i];
+        }
+        System.out.println("sum"+s);
+        double avg=(s/arr.length);
+        System.out.println("average"+avg);
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<=n-1;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int x=sc.nextInt();
+        for(int i=0;i<arr.length;i++)
+        {
+            if(x==arr[i])
+            {
+                System.out.println(x+"found at"+i);
+            }
+        }
+    }
+}
+/*import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        String names[]=new String[n];
+        for(int i=0;i<=n-1;i++)
+        {
+            names[i]=sc.next();    
+        }
+        for(int i=0;i<=n-1;i++)
+        {
+            System.out.println(names[i]);
+        }
+    }
+}
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<=n-1;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int max=arr[0];
+        int min=arr[0];
+        for(int i=0;i<=n-1;i++)
+        {
+            if(arr[i]>max)
+            {
+                max=arr[i];
+            }
+        }
+        for(int i=0;i<=n-1;i++)
+        {
+            if(arr[i]<min)
+            {
+                min=arr[i];
+            }
+        }
+        System.out.println("maximum"+max);
+        System.out.println("minimum"+min);
+    }
+}*/
+
+
+
+
+
+
+
+
+
+
