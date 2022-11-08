@@ -1,0 +1,339 @@
+//1.write the code to print following conditions using nested if:and also print net payment.
+/*import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        double amt=sc.nextDouble();
+        if(amt>=20000){
+            amt=amt-amt*0.1;
+        }
+        else if(amt>=10000 && amt<20000){
+            amt=amt-amt*0.05;
+        }
+        else if(amt>=5000 && amt<10000){
+            amt=amt-amt*0.02;
+        }
+        else if(amt<5000){
+            amt=amt;
+        }
+        System.out.println(amt);
+    }
+}
+//2. write the code to print whether the number is prime or not.
+import java.util.*;
+public class  MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int c=0;
+        for(int i=2;i<=num-1;i++){
+            if(num%i==0){
+                c++;
+            }
+        }
+        if(c==0){
+            System.out.println("prime number");
+        }
+        else{
+            System.out.println("not prime number");
+        }
+    }
+}
+//3. write the code to print the factorial of a number using command line argument.
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+            int a=Integer.parseInt(args[0]);
+            int f=1;
+            while(a>0){
+                f=f*a;
+                a--;
+            }
+            System.out.println("factorial="+f);
+    }
+}
+//4. write the code to print the left and right triangular pattern.
+public class MyClass{
+    public static void main(String[] args){
+        int n=5;
+        for(int i=1;i<=5;i++){
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        int n=5;
+        for(int i=1;i<=5;i++){
+            for(int j=5;j>i;j--){
+                System.out.print(" ");
+            }
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+/* 5 
+class AddDistance{
+    static int d1=20;
+    static int d2=30;
+    static class A{
+        static void PrintP(){
+            System.out.println("Parent");
+            System.out.println("distance="+(d1+d2)+"feet");
+        }
+    }
+    static class B extends A{
+        static void PrintP(){
+            System.out.println("Child"); 
+            System.out.println("distance="+(d1+d2)+"feet");
+        }
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        AddDistance obj=new AddDistance();
+        AddDistance.A obj1=new AddDistance.A();
+        obj1.PrintP();
+        AddDistance.B obj2=new AddDistance.B();
+        obj2.PrintP();
+        AddDistance.A obj3=new AddDistance.B();
+        obj3.PrintP();
+    }
+}
+//6.show hierarchial inheritence in bank for get rate of interest.
+class Main{
+    float GetRateOfInterest(){
+        return 0;
+    }
+}
+class SBI extends Main{
+    float getRateOfInterest(){
+        return 8.4f;
+    }
+}
+class ICICI extends Main{
+    float getRateOfInterest(){
+        return 7.3f;
+    }
+}
+class AXIS extends Main{
+    float getRateOfInterest(){
+        return 9.7f;
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        SBI s=new SBI();
+        System.out.println(s.getRateOfInterest());
+        AXIS a=new AXIS();
+        System.out.println(a.getRateOfInterest());
+        ICICI i=new ICICI();
+        System.out.println(i.getRateOfInterest());
+        System.out.println(i.GetRateOfInterest());
+    }
+}
+// 7. java program to show method overloading.
+/*class PrintNumChar{
+    int n;
+    char ch;
+    public void PrintInfo(int x,char c){
+        System.out.print(x+" "+c);
+    }
+    public void PrintInfo(char c,int x){
+        System.out.print(c+" "+x);
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        PrintNumChar p1=new PrintNumChar();
+        p1.PrintInfo(5,'a');
+        p1.PrintInfo('b',10);
+    }
+}*/
+//8.java program to check whether the string is present or not.
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        System.out.println(str.contains("e"));
+    }
+}
+// create a class Bank and subclass SBI,AXIS,PNB and redefine abstract method getrateofinterest.
+abstract class Bank{
+abstract int getrateofinterest();
+    
+}
+class SBI extends Bank{
+    int getrateofinterest(){
+        return 7;
+    }
+}
+class PNB extends Bank{
+    int getrateofinterest(){
+        return 8;
+    }
+}
+class AXIS extends Bank{
+    int getrateofinterest(){
+        return 9;
+    }
+}
+public class MyClass{
+    public static void main(String[] args){
+        AXIS a=new AXIS();
+        System.out.println(a.getrateofinterest());
+        SBI s=new SBI();
+        System.out.println(s.getrateofinterest());
+        Bank p=new PNB();
+        System.out.println(p.getrateofinterest());
+    }
+}
+//11. write the java program to calculate the average value of array elements.
+import java.util.*;;
+public class MyClass{ 
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int s=0;
+        for(int i=0;i<=n-1;i++){
+            arr[i]=sc.nextInt();
+            s=s+arr[i];
+        }
+        float avg=s/n;
+        System.out.println(avg);
+    }
+}
+//12.java program for multiplication of matrices.
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        int p=sc.nextInt();
+        int q=sc.nextInt();
+        int[][] arr1=new int[m][n];
+        int[][] arr2=new int[p][q];
+        if(n!=p){
+            System.out.println("multiplication not perform");
+        }
+        else{
+            for(int i=0;i<=m-1;i++){
+                for(int j=0;j<=n-1;j++){
+                    arr1[i][j]=sc.nextInt();
+                }
+            }
+            for(int i=0;i<=p-1;i++){
+                for(int j=0;j<=q-1;j++){
+                    arr2[i][j]=sc.nextInt();
+                }
+            }
+            int[][] narr=new int[m][q];
+            for(int i=0;i<=m-1;i++){
+                for(int j=0;j<=q-1;j++){
+                    narr[i][j]=0;
+                    for (int k = 0; k < n; k++){
+                        narr[i][j] += arr1[i][k] * arr2[k][j];
+                    }
+                }
+            }
+            for(int i=0;i<=m-1;i++){
+                for(int j=0;j<=q-1;j++){
+                    System.out.print(narr[i][j]+" ");
+                }
+                System.out.println();
+            }
+        }
+    }
+}
+//13. what will be the output of following code.
+class Calculator{
+    int num=100;
+    public void calc(int num){
+        this.num=num*10;
+    }
+    public void printNum(){
+        System.out.println(num);
+    }
+    public static void main(String[] args){
+        Calculator obj=new Calculator();
+        obj.calc(2);
+        obj.printNum();
+    }
+}
+//output=20
+//14. predict the syntax error
+class sample{
+    public static void main(string args[]);{
+        float a=2.3,b=3.4;
+        System.out.println(a+b);
+    }
+}
+// output= resulting 4 errors
+//1.error: cannot find symbol
+//     public static void main(string args[]);
+// 2.error: missing method body, or declare abstract
+//     public static void main(string args[]);
+// 3.error: incompatible types: possible lossy conversion from double to float
+//         float a=2.3,b=3.4
+// 4.error: incompatible types: possible lossy conversion from double to float
+//         float a=2.3,b=3.4
+*/
+/*// print 2-D array
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        int[][] arr=new int[m][n];
+        for(int i=0;i<=m-1;i++){
+            for(int j=0;j<=n-1;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<=m-1;i++){
+            for(int j=0;j<=n-1;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+//GFG PROGRAM 1-d and 2-d array
+import java.util.*;
+public class MyClass{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[][] arr1=new int[n][n];
+        int [] arr2=new int[n];
+        int s=0;
+        for(int i=0;i<=n-1;i++){
+            for(int j=0;j<=n-1;j++){
+                arr1[i][j]=sc.nextInt();
+                if(i==j){
+                    s=s+arr1[i][j];
+                }
+            }
+        }
+        for(int i=0;i<=n-1;i++){
+            arr2[i]=sc.nextInt();
+        }
+        int max=arr2[0];
+        for(int i=0;i<=n-1;i++){
+            if(arr2[i]>max){
+                max=arr2[i];
+            }
+        }
+        System.out.println(s+" "+max);
+    }
+}*/
